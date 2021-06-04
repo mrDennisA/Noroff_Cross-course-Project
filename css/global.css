@@ -1,0 +1,220 @@
+:root {
+    --color01: #0a3641;
+    --color02: #95a2a6;
+    --color03: #bf6930;
+    --color04: #d9974c;
+    --color05: #faf8f5;
+    --color06: #ffffff;
+    --color07: #bf3030;
+    --color08: rgba(0, 128, 0, 0.75);
+
+    --nav-hight: 4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--color01);
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--color02);
+}
+header {
+    background-color: var(--color04);
+}
+main {
+    background-color: var(--color06);
+}
+footer {
+    background-color: var(--color02);
+}
+
+[class*="wrapper"] {
+    max-width: 500px;
+    margin: auto;
+}
+
+[class*="container"] {
+    padding: 1rem;
+}
+
+/* Grid List */
+.containerGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+    gap: 2rem;
+}
+.containerGrid a {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+.containerGrid a:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
+
+    box-shadow: 0 0 0 1px var(--color02) inset;
+}
+.containerGrid img {
+    box-sizing: border-box;
+    background-color: var(--color05);
+    padding: 1rem;
+    border-radius: 0.25rem;
+    width: 100%;
+}
+.containerGrid span {
+    display: flex;
+    justify-content: flex-end;
+}
+.containerGrid div * {
+    padding: 0.25rem 0;
+}
+
+/* Banner */
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 12rem;
+    max-height: 16rem;
+    height: 20vw;
+}
+.banner-categories {
+    background-position: center 66%;
+    background-size: cover;
+}
+.banner-categories * {
+    color: var(--color06);
+}
+.banner-categories div {
+    text-shadow: 0 0 8px var(--color01);
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    display: flex;
+}
+.breadcrumbs li + li:before {
+    content: "\00a0/\00a0";
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+/* Categories */
+.categories {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.categories div {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 0.25rem;
+}
+.categories a {
+    margin: 1rem;
+}
+
+/* Categories CTA */
+.categories h4 {
+    padding: 0.75rem 0;
+    text-align: center;
+    border-radius: 0.25rem;
+    color: var(--color05);
+    background-color: var(--color01);
+}
+.categories h4:hover {
+    transition: 0.3s;
+    background-color: var(--color03);
+}
+
+/* Styles */
+.news h2 {
+    text-align: center;
+    padding: 0 0 1rem;
+    margin: 0 0 1rem;
+    border-bottom: 1px var(--color02) solid;
+}
+
+.hidden {
+    display: none;
+}
+
+.underline {
+    text-decoration: 2px var(--color07) underline;
+}
+
+.messageSuccess {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0 1px var(--color08) inset;
+    background-color: rgba(0, 128, 0, 0.1);
+}
+
+.messageError {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
+@media only screen and (min-width: 768px) {
+    [class*="wrapper"] {
+        max-width: 700px;
+    }
+
+    [class*="container"] {
+        padding: 1.5rem;
+    }
+
+    /* Categories */
+    .categories {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    [class*="wrapper"] {
+        max-width: 1200px;
+    }
+
+    [class*="container"] {
+        padding: 2rem;
+    }
+
+    /* Categories */
+    .categories div {
+        justify-content: center;
+    }
+    .categories a {
+        margin: 2rem;
+    }
+}
+
+/* OLD */
+.icon01 {
+    width: 1.5rem;
+}
+.icon02 {
+    width: 2.5rem;
+}
+
+.stars {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.stars > img {
+    width: 1rem;
+}
+
+/* Border helpers */
+/* {
+    box-shadow: 0px 0px 0px 1px rgba(64, 64, 64, 15) inset;
+}

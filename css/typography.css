@@ -1,0 +1,67 @@
+@import url("https://use.typekit.net/qqh1vxj.css");
+
+:root {
+    --font01: "transat-text", sans-serif;
+}
+
+* {
+    font-family: var(--font01);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+h2 {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+h3,
+.h3 {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+h4,
+.h4 {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.fw {
+    font-weight: 500;
+}
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 2.125rem;
+    }
+    h2 {
+        font-size: 1.625rem;
+    }
+    h3,
+    .h3 {
+        font-size: 1.325rem;
+    }
+    h4,
+    .h4 {
+        font-size: 1.125rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    h1 {
+        font-size: 2.25rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    h3,
+    .h3 {
+        font-size: 1.5rem;
+    }
+    h4,
+    .h4 {
+        font-size: 1.25rem;
+    }
+}

@@ -1,0 +1,32 @@
+.about {
+    background-size: cover;
+    background-position: center;
+    background-image: url("../images/about-us_banner.jpg");
+}
+
+.about-info {
+    max-width: 500px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.about-info div {
+    padding: 2rem;
+    background-color: var(--color05);
+}
+
+.about-info h2 {
+    text-align: center;
+    padding: 0 0 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .about-info {
+        max-width: 700px;
+
+        padding: 2rem 2rem 0;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+}

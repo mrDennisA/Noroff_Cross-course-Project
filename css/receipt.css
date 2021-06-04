@@ -1,0 +1,49 @@
+.receipt {
+    background-color: var(--color05);
+    border-radius: 0.25rem;
+    padding: 2rem;
+    max-width: 700px;
+    margin: auto;
+}
+
+.receipt h1,
+.receipt h3 {
+    text-align: center;
+    padding: 0 0 2rem;
+}
+
+.receipt h4 {
+    color: var(--color02);
+    border-bottom: 1px var(--color02) solid;
+}
+
+.receipt-info div,
+.receipt-order div {
+    display: flex;
+    padding: 1rem 0;
+}
+
+.receipt-info ul {
+    flex: 1;
+}
+
+.receipt-order div {
+    justify-content: space-between;
+}
+
+div.receipt-total {
+    justify-content: flex-end;
+}
+
+div.receipt-total ul {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+}

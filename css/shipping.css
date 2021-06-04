@@ -1,0 +1,121 @@
+body {
+    background-color: var(--color06);
+}
+
+main > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    transition: 0.3s;
+}
+/* Shipping Form */
+.shippingForm {
+    padding: 1rem 0 0;
+}
+
+.shippingForm > h4 {
+    display: flex;
+    margin: 0 0 2rem;
+}
+
+.shippingForm span {
+    flex: 1;
+}
+
+.shippingForm > div {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0 0;
+}
+div.shippingName div,
+div.shippingCityCountry div {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    transition: 0.5s;
+}
+
+div.shippingDetails,
+div.shippingButton {
+    padding: 1rem 0 0;
+}
+
+.shippingLastName,
+.shippingCountry {
+    margin: 0.5rem 0 0;
+}
+
+/* Shipping Info */
+.shippingInfo {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-gap: 1rem;
+    background-color: var(--color05);
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0 1px var(--color02) inset;
+    padding: 1rem;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1rem;
+}
+
+.cart-item img {
+    width: 100%;
+    max-width: 150px;
+}
+
+.cart-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.shippingItemPrice {
+    text-align: end;
+}
+
+.shippingItems span,
+.shippingTotal span {
+    padding: 0.5rem 0;
+}
+
+.shippingTotal {
+    grid-row-start: 1;
+    padding: 0 0 1rem;
+    border-bottom: 1px var(--color01) solid;
+    font-weight: 300;
+}
+
+.shippingTotal div {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (min-width: 768px) {
+    main > div {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+    }
+
+    .shippingTotal {
+        grid-row-start: unset;
+        padding: 1rem 0 0;
+        border-bottom: unset;
+        border-top: 1px var(--color01) solid;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    div.shippingName,
+    div.shippingCityCountry {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .shippingLastName,
+    .shippingCountry {
+        margin: unset;
+    }
+}

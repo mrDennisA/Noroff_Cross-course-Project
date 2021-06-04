@@ -1,0 +1,28 @@
+.banner-categories * {
+    color: var(--color01);
+}
+.banner-categories div {
+    text-shadow: unset;
+}
+
+.contactForm {
+    max-width: 500px;
+    margin: auto;
+}
+
+.contactForm h2,
+.contactForm p {
+    text-align: center;
+}
+
+.contactForm div {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+}

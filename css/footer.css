@@ -1,0 +1,48 @@
+footer section,
+footer div {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer > section {
+    flex-direction: column;
+}
+
+footer a {
+    font-weight: 500;
+    flex: 1;
+}
+
+footer a:hover {
+    color: var(--color06);
+    text-decoration: underline;
+}
+
+.links {
+    border-bottom: 1px var(--color01) solid;
+}
+
+.policy {
+    flex-wrap: wrap;
+}
+
+.policy span,
+.policy a {
+    padding: 0 0.25rem;
+}
+
+@media only screen and (min-width: 768px) {
+    footer > section {
+        flex-direction: row;
+    }
+    .links {
+        border-right: 1px var(--color01) solid;
+        border-bottom: unset;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+}

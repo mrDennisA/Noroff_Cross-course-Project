@@ -7,6 +7,7 @@ let extractPageName = window.location.pathname
 const urlApi = "https://yunitto.online/noroff/FEU1/AW32_Content-Management-Systems/wp/wp-json/wc/v3/products/";
 const apiKey = "?consumer_key=ck_7ac3c5ae6e385766d72a163568b2312209af9f12&consumer_secret=cs_2cff425a5029d2edb58553a61ff34c59c2d72b12";
 
+const body = document.querySelector("body");
 const main = document.querySelector("main");
 
 async function fetchApi(url, key) {
@@ -25,6 +26,7 @@ async function fetchApi(url, key) {
 
         // Add Main
         addMain(mens, womens);
+        body.style.backgroundColor = "var(--color02)";
         main.classList.remove("loader");
 
         // End

@@ -50,6 +50,7 @@ main.innerHTML += `
     </div>
 `;
 
+body.style.backgroundColor = "var(--color02)";
 main.classList.remove("loader");
 
 // End

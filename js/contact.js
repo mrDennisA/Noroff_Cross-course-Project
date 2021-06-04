@@ -6,6 +6,7 @@ addBanner(validatePage().category, validatePage().subCategory);
 
 // Form
 addContactForm();
+body.style.backgroundColor = "var(--color02)";
 main.classList.remove("loader");
 
 // End

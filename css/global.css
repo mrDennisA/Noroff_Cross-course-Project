@@ -20,7 +20,7 @@
 }
 
 body {
-    background-color: var(--color02);
+    /* background-color: var(--color02); */
 }
 header {
     background-color: var(--color04);

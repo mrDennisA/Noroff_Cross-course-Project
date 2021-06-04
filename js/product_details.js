@@ -15,6 +15,7 @@ async function fetchProduct(url, id, key) {
     // Add Breadcrumbs
     addBreadcrumbs(item);
 
+    body.style.backgroundColor = "var(--color02)";
     main.classList.remove("loader");
 
     main.innerHTML += `

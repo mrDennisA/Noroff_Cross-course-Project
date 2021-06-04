@@ -5,7 +5,7 @@
 
 .cart-header {
     display: grid;
-    grid-template-columns: 40% repeat(3, 20%);
+    grid-template-columns: 100%;
     border-bottom: 1px var(--color02) solid;
 }
 .cart-header div {
@@ -15,6 +15,7 @@
 .cart-header > :nth-child(2),
 .cart-header > :nth-child(3),
 .cart-header > :nth-child(4) {
+    display: none;
     text-align: center;
 }
 
@@ -70,11 +71,30 @@
 /* Cart with Items*/
 .cart-item {
     display: grid;
-    grid-template-columns: 40% repeat(3, 20%);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "area01 area01"
+        "area04 area02"
+        ". area03";
+
     margin: 2rem 0;
     border-radius: 0.25rem;
     box-shadow: 0 0 0 1px var(--color02) inset;
 }
+
+.cart-item > :nth-child(1) {
+    grid-area: area01;
+}
+.cart-item > :nth-child(2) {
+    grid-area: area02;
+}
+.cart-item > :nth-child(3) {
+    grid-area: area03;
+}
+.cart-item > :nth-child(4) {
+    grid-area: area04;
+}
+
 .cart-item div {
     display: flex;
     justify-content: center;
@@ -131,7 +151,6 @@ div.cart-item_img {
 }
 .cart-total > :nth-child(2) {
     display: flex;
-    justify-content: end;
 }
 
 .cart-total > :nth-child(2) a {
@@ -139,11 +158,36 @@ div.cart-item_img {
     color: var(--color05);
     padding: 1rem 0;
     background-color: var(--color01);
-    width: 40%;
+    width: 100%;
     border-radius: 0.25rem;
     transition: 0.3s ease;
 }
 
 .cart-total > :nth-child(2) a:hover {
     background-color: var(--color03);
+}
+
+@media only screen and (min-width: 768px) {
+    .cart-header {
+        grid-template-columns: 40% repeat(3, 20%);
+    }
+
+    .cart-header > :nth-child(2),
+    .cart-header > :nth-child(3),
+    .cart-header > :nth-child(4) {
+        display: inline-block;
+    }
+    .cart-item {
+        grid-template-columns: 40% repeat(3, 20%);
+        grid-template-areas: "area01 area02 area03 area04";
+    }
+    .cart-total > :nth-child(2) {
+        justify-content: flex-end;
+    }
+    .cart-total > :nth-child(2) a {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
 }
